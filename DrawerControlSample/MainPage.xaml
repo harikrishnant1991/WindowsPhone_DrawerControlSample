@@ -1,0 +1,32 @@
+﻿<Page x:Class="DrawerControlSample.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:DrawerControlSample"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:jhp="using:JHControl.Panel"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <jhp:DrawerControl x:Name="MainDrawerControl">
+        <jhp:DrawerControl.ContentHeader>
+            <Grid Background="Blue"
+                  Height="50"
+                  HorizontalAlignment="Stretch">
+                <Button Content="Menu"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Click="Button_Click" />
+            </Grid>
+        </jhp:DrawerControl.ContentHeader>
+        <jhp:DrawerControl.MenuControl>
+            <Grid Width="300"
+                  VerticalAlignment="Stretch"
+                  Background="Red" />
+        </jhp:DrawerControl.MenuControl>
+        <jhp:DrawerControl.Content>
+            <Grid HorizontalAlignment="Stretch"
+                  VerticalAlignment="Stretch"
+                  Background="Green" />
+        </jhp:DrawerControl.Content>
+    </jhp:DrawerControl>
+</Page>
