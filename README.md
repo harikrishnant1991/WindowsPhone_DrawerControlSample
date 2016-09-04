@@ -1,5 +1,5 @@
 # DrawerControl for Windows and Windows Phone
-Drawer control is a control for Windows and Windows Phone 8.1+ that replicate the functionality of Navigation Drawer in android and SplitView in UWP.
+DrawerControl is a control for Windows and Windows Phone 8.1+ that replicate the functionality of Navigation Drawer in android and SplitView in UWP.
 
 ## How to Use?
 
@@ -23,33 +23,36 @@ So that the `ResourceDictionary` tag now looks like:
 
 ``` XML
 <jhp:DrawerControl x:Name="MainDrawerControl">
-        <!--
-        This is the content header. You can define the toolbar here.
-        If this is not implemented, the content would fill the space, hence this is not required.
-        -->
-        <jhp:DrawerControl.ContentHeader>
-            <Grid Background="Blue"
-                  Height="50"
-                  HorizontalAlignment="Stretch">
-            </Grid>
-        </jhp:DrawerControl.ContentHeader>
-        <!--
-        This is the drawer element.
-        -->
-        <jhp:DrawerControl.MenuControl>
-            <Grid Width="300"
-                  VerticalAlignment="Stretch"
-                  Background="Red" />
-        </jhp:DrawerControl.MenuControl>
-        <!--
-        This is the main content of the control.
-        -->
-        <jhp:DrawerControl.Content>
-            <Grid HorizontalAlignment="Stretch"
-                  VerticalAlignment="Stretch"
-                  Background="Green" />
-        </jhp:DrawerControl.Content>
-    </jhp:DrawerControl>
+    <!--
+    This is the content header. You can define the toolbar here.
+    If this is not implemented, the content would fill the space, hence this is not required.
+    This can be customised as you like it.
+    -->
+    <jhp:DrawerControl.ContentHeader>
+        <Grid Background="Blue"
+              Height="50"
+              HorizontalAlignment="Stretch">
+        </Grid>
+    </jhp:DrawerControl.ContentHeader>
+    <!--
+    This is the drawer element.
+    This can be customised as you like it.
+    -->
+    <jhp:DrawerControl.MenuControl>
+        <Grid Width="300"
+              VerticalAlignment="Stretch"
+              Background="Red" />
+    </jhp:DrawerControl.MenuControl>
+    <!--
+    This is the main content of the control.
+    This can be customised as you like it.
+    -->
+    <jhp:DrawerControl.Content>
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              Background="Green" />
+    </jhp:DrawerControl.Content>
+</jhp:DrawerControl>
 ```
 
 The DrawerControl has a `IsDrawerOpen` property that can be used to open and close the drawer as required.
